@@ -16,6 +16,14 @@ Route::get('/', WellcomeController::class);
 Route::get('offline', function () {
     return view('modules/laravelpwa/offline');
 });
+Route::get('function', function () {
+    return view('modules/laravelpwa/function');
+});
+
+Route::get('aboutus', function () {
+    return view('about-us');
+});
+
 
 Route::get('search', SearchController::class)->name('search');
 

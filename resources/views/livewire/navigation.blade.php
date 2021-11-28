@@ -79,6 +79,7 @@
             @livewire('dropdown-cart')
         </div>
     </div>
+    
     <nav id="navigation-menu" :class="{'block':open,'hidden':!open}"
         class="bg-trueGray-700 bg-opacity-25 w-full absolute hidden">
         {{-- Menu computadora --}}

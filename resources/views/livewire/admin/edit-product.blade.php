@@ -47,11 +47,11 @@
         @endif
         @livewire('admin.status-product', ['product' => $product], key('status-product-' . $product->id))
         <div class="bg-white shadow-xl rounded-lg p-6">
-            <div class="grid grid-cols-2 gap-6 mb-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
                 {{-- Categoría --}}
                 <div>
                     <x-jet-label value="Categoría" />
-                    <select class="form-control" wire:model="category_id">
+                    <select class="form-control w-full" wire:model="category_id">
                         <option value="" selected disabled>Seleccione una categoría</option>
                         @foreach ($categories as $category)
                             <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -62,7 +62,7 @@
                 {{-- Subcategoría --}}
                 <div>
                     <x-jet-label value="Subcategorías" />
-                    <select class="form-control" wire:model="product.subcategory_id">
+                    <select class="form-control w-full" wire:model="product.subcategory_id">
                         <option value="" selected disabled>Seleccione una subcategoría</option>
                         @foreach ($subcategories as $subcategory)
                             <option value="{{ $subcategory->id }}">{{ $subcategory->name }}</option>

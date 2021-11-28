@@ -1,15 +1,15 @@
 <?php
 
 return [
-    'name' => 'LaravelPWA',
+    'name' => 'Amantoli',
     'manifest' => [
         'name' => env('APP_NAME', 'Amantoli'),
-        'short_name' => 'PWA',
+        'short_name' => 'Amantoli',
         'start_url' => '/',
-        'background_color' => '#ffffff',
-        'theme_color' => '#000000',
+        'background_color' => '#404040',
+        'theme_color' => '#404040',
         'display' => 'standalone',
-        'orientation'=> 'any',
+        'orientation'=> 'portrait',
         'status_bar'=> 'black',
         'icons' => [
             '72x72' => [
@@ -59,19 +59,19 @@ return [
         ],
         'shortcuts' => [
             [
-                'name' => 'Shortcut Link 1',
-                'description' => 'Shortcut Link 1 Description',
-                'url' => '/shortcutlink1',
+                'name' => 'Ordenes',
+                'description' => 'Mis ordenes',
+                'url' => '/orders',
                 'icons' => [
                     "src" => "/images/icons/icon-72x72.png",
                     "purpose" => "any"
                 ]
             ],
-            [
+            /*[
                 'name' => 'Shortcut Link 2',
                 'description' => 'Shortcut Link 2 Description',
                 'url' => '/shortcutlink2'
-            ]
+            ]*/
         ],
         'custom' => []
     ]

@@ -7,6 +7,7 @@ use Livewire\Component;
 class StatusProduct extends Component
 {
     public $product, $status;
+    
     public function mount()
     {
         $this->status = $this->product->status;

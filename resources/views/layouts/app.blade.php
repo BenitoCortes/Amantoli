@@ -50,6 +50,14 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="{{ asset('vendor/FlexSlider/jquery.flexslider-min.js') }}"></script>
+    {{-- Sweet Alert 2 --}}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Push jS -->
+    <script src="{{ asset('vendor/PushJs/push.min.js') }}"></script>
+    {{--  
+        <script src="{{ asset('vendor/PushJs/push.min.js.map') }}"></script>
+        <script src="{{ asset('vendor/PushJs/serviceWorker.min.js') }}"></script>
+    --}}
     <!-- Amantoli PWA -->
     @laravelPWA
 </head>
@@ -133,6 +141,8 @@
                             class="text-white underline text-small" href="/privacy">{{ __('Privacy') }}</a></li>
                     <li class="md:mx-2 md:inline leading-7 text-sm" id="footer-navi-2"><a
                             class="text-white underline text-small" href="/privacy">{{ __('Contact Us') }}</a></li>
+                    <li class="md:mx-2 md:inline leading-7 text-sm" id="footer-navi-2"><a
+                        class="text-white underline text-small" href="/aboutus">{{ __('About us') }}</a></li>
                 </ul>
             </div>
             <!-- end container -->
@@ -163,5 +173,4 @@
     </script>
     @stack('script')
 </body>
-
 </html>

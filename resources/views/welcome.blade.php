@@ -1,4 +1,7 @@
 <x-app-layout>
+    <div class="">
+        @livewire('show-slider')
+    </div>
     <div class="container py-8">
         @foreach ($categories as $category)
             <section class="mb-6">
@@ -58,6 +61,39 @@
                     ]
                 });
             });
+        </script>
+        <script>
+            //Push.Permission.request(onGranted, onDenied);
+            if(Push.Permission.has(Push.Permission.GRANTED))
+            {
+                Push.create("Hola, saludos desde Amantoli", {
+                    body: "Gracias por activar las notificacciones",
+                    icon: '{{ asset('multimedia/152.jpg') }}',
+                    timeout: 4000,
+                    onClick: function () {
+                        window.focus();
+                        this.close();
+                        
+                    }
+                });
+                Push.config({
+                    serviceWorker: '{{ asset('vendor/PushJs/serviceWorker.min.js') }}',
+                });
+            }
+            
+            /*
+            if(Push.Permission.has(Push.Permission.DEFAULT)){
+                Push.create("Gracias por activar las notificaciones", {
+                body: "Ahora recibira las noticias de nuestra pagína",
+                icon: '{{ asset('multimedia/152.jpg') }}',
+                timeout: 4000,
+                onClick: function () {
+                    window.focus();
+                    this.close();
+                }
+                });
+            }
+            */
         </script>
     @endpush
 </x-app-layout>
